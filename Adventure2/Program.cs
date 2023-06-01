@@ -7,24 +7,23 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
-int x1 = ReadInt("Введите координату X первой точки: ");
-int y1 = ReadInt("Введите координату Y первой точки: ");
-int z1 = ReadInt("Введите координату Z первой точки: ");
-int x2 = ReadInt("Введите координату X второй точки: ");
-int y2 = ReadInt("Введите координату Y второй точки: ");
-int z2 = ReadInt("Введите координату Z второй точки: ");
+double x1 = ReadDouble("Введите координату X первой точки: ");
+double y1 = ReadDouble("Введите координату Y первой точки: ");
+double z1 = ReadDouble("Введите координату Z первой точки: ");
+double x2 = ReadDouble("Введите координату X второй точки: ");
+double y2 = ReadDouble("Введите координату Y второй точки: ");
+double z2 = ReadDouble("Введите координату Z второй точки: ");
 
-int A = x2 - x1;
-int B = y2 - y1;
-int C = z1 - z2;
+double A = x2 - x1;
+double B = y2 - y1;
+double C = z1 - z2;
 
 double length = Math.Sqrt(A * A + B * B + C * C);
 Console.WriteLine($"Длинна отрезка {length}");
 
 
-// Функция ввода сообщения
-int ReadInt(string message)
+double ReadDouble(string message)
 {
     Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
+    return Convert.ToDouble(Console.ReadLine());
 }
